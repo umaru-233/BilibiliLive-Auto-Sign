@@ -1,9 +1,9 @@
 # -*- coding: utf8 -*-
 *Copyright: Copyright (c) 2022
 *Created on 2022-02-15
-*Author:Yang_Chenglin
+*Author:umaru-233
 *Version 1.0
-*Title: 哔哩哔哩直播每日自动签到
+*Title: Bilibili-Auto-sign
 
 import json
 import time
