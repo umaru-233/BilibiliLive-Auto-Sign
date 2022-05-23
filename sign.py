@@ -14,7 +14,7 @@ def main_handler(event, context):
     time.sleep(5) //等待五秒继续执行
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))  //读时间
 
-    sessdata = "14d32838%2C1660404025%2Ce2669*21"   //替换成自己的B站cookie
+    sessdata = "xxxxxxxxxxxxxxxxxxxxxxxxxx"   //替换成自己的B站cookie
 
     userinfo = json.loads(r.get("https://api.bilibili.com/x/web-interface/nav", cookies={"SESSDATA":sessdata}).text)
     if userinfo["data"]["isLogin"] == False:
@@ -28,10 +28,10 @@ def main_handler(event, context):
     if sign_info["code"] == 0:  //执行成功
         print("今日收获: "+sign_info["data"]["text"])
         print(sign_info["data"]["specialText"])
-        r.get('https://wx.xtuis.cn/TGUFunB6ASNcsPmr5gHmO9Uk3.send?text=签到成功')
+        r.get('https://wx.xtuis.cn/xxxxxxxxxxxxxxxxx.send?text=签到成功')//推送token
     else:
         print("签到失败："+sign_info["message"])   //执行失败
-        r.get('https://wx.xtuis.cn/TGUFunB6ASNcsPmr5gHmO9Uk3.send?text=签到失败')
+        r.get('https://wx.xtuis.cn/xxxxxxxxxxxxxxxxx.send?text=签到失败')//推送token
         return "Sign Failed"
 
     return("Finish")
